@@ -3,7 +3,7 @@ package repository
 import "context"
 
 type Game struct {
-	Id    int `gorm:"primaryKey;auto_increment"`
+	Id    int
 	Token string
 }
 

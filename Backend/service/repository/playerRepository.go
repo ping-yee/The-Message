@@ -3,9 +3,10 @@ package repository
 import "context"
 
 type Player struct {
-	Id   int `gorm:"primaryKey;auto_increment"`
-	Name string
-	G_Id int
+	Id    int
+	Name  string
+	Group string
+	G_Id  int
 }
 
 type PlayerRepository interface {

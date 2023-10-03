@@ -10,12 +10,12 @@ import (
 
 type Player struct {
 	gorm.Model
-	Id        int `gorm:"primaryKey;auto_increment"`
-	Name      string
-	Group     string
-	CreatedAt time.Time `gorm:"autoCreateTime"`
-	UpdatedAt time.Time `gorm:"autoCreateTime"`
-	DeletedAt gorm.DeletedAt
+	Id        int            `json:"id" gorm:"primaryKey;auto_increment"`
+	Name      string         `json:"token" gorm:"not null"`
+	Group     string         `json:"group"`
+	CreatedAt time.Time      `json:"createdAt,omitempty" gorm:"autoCreateTime:milli"`
+	UpdatedAt time.Time      `json:"updatedAt,omitempty" gorm:"autoUpdateTime:milli"`
+	DeletedAt gorm.DeletedAt `json:"deletedAt,omitempty" gorm:"index"`
 }
 
 type PlayerRepository struct {
