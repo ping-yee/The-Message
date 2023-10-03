@@ -11,7 +11,7 @@ import (
 type Game struct {
 	gorm.Model
 	ID        int            `json:"id" gorm:"primaryKey;auto_increment"`
-	Token     string         `json:"token" gorm:"not null"`
+	Token     string         `json:"token" gorm:"type:varchar(15);NOT NULL"`
 	CreatedAt time.Time      `json:"createdAt,omitempty" gorm:"autoCreateTime:milli"`
 	UpdatedAt time.Time      `json:"updatedAt,omitempty" gorm:"autoUpdateTime:milli"`
 	DeletedAt gorm.DeletedAt `json:"deletedAt,omitempty"`

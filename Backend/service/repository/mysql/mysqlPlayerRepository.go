@@ -11,8 +11,8 @@ import (
 type Player struct {
 	gorm.Model
 	Id        int            `json:"id" gorm:"primaryKey;auto_increment"`
-	Name      string         `json:"token" gorm:"not null"`
-	Group     string         `json:"group"`
+	Name      string         `json:"name" gorm:"type:varchar(255);NOT NULL"`
+	Group     string         `json:"group" gorm:"type:varchar(15);NOT NULL"`
 	CreatedAt time.Time      `json:"createdAt,omitempty" gorm:"autoCreateTime:milli"`
 	UpdatedAt time.Time      `json:"updatedAt,omitempty" gorm:"autoUpdateTime:milli"`
 	DeletedAt gorm.DeletedAt `json:"deletedAt,omitempty" gorm:"index"`
