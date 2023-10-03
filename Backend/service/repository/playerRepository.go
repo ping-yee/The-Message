@@ -1,6 +1,7 @@
 package repository
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import (
 	"context"
 )
@@ -15,6 +16,8 @@ type Player struct {
 type PlayerRepository interface {
 	CreatePlayer(ctx context.Context, player *Player) (*Player, error)
 =======
+=======
+>>>>>>> 5305246 (feat: initial the player componenet.)
 import "context"
 
 type Player struct {
@@ -29,5 +32,8 @@ type PlayerRepository interface {
 	UpdatePlayerCards(ctx context.Context, id int, cards []string) error
 	PlayerPlayCard(ctx context.Context, id int, card string) error
 	DeleteAllGamePlayers(ctx context.Context, id int) error
+<<<<<<< HEAD
 >>>>>>> e21ca85 (feat: initial the player componenet.)
+=======
+>>>>>>> 5305246 (feat: initial the player componenet.)
 }
