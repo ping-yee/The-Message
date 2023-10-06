@@ -21,10 +21,10 @@ type PlayerRepository interface {
 import "context"
 
 type Player struct {
-	Id    int
-	Name  string
-	Group string
-	G_Id  int
+	Id    int    `json:"id"`
+	Name  string `json:"name"`
+	Group string `json:"group"`
+	G_Id  int    `json:"g_id"`
 }
 
 type PlayerRepository interface {

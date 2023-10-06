@@ -10,6 +10,7 @@ import (
 
 type Player struct {
 	gorm.Model
+<<<<<<< HEAD
 	Id           int `gorm:"primaryKey;auto_increment"`
 	Name         string
 	GameId       int `gorm:"foreignKey:GameId;references:Id"`
@@ -17,6 +18,15 @@ type Player struct {
 	CreatedAt    time.Time `gorm:"autoCreateTime"`
 	UpdatedAt    time.Time `gorm:"autoCreateTime"`
 	DeletedAt    gorm.DeletedAt
+=======
+	Id        int            `gorm:"primaryKey;auto_increment"`
+	Name      string         `gorm:"type:varchar(255);NOT NULL"`
+	Group     string         `gorm:"type:varchar(15);NOT NULL"`
+	G_id      string         `gorm:"type:varchar(15);NOT NULL"`
+	CreatedAt time.Time      `gorm:"autoCreateTime"`
+	UpdatedAt time.Time      `gorm:"autoUpdateTime"`
+	DeletedAt gorm.DeletedAt `gorm:"index"`
+>>>>>>> f5444a2 (fix: fix the soft delete and cannot auto increame time problem.)
 }
 
 type PlayerRepository struct {
